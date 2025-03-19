@@ -38,7 +38,7 @@ if (!validateDate($check_in) || !validateDate($check_out)) {
         exit;
     }
 
-$sql = "INSERT INTO bookings (guest_id, room_id, check_in, check_out, status) VALUES ('$guest_id', '$room_id', '$check_in', '$check_out', 'pending')";
+$sql = "INSERT INTO bookings (guest_id, room_id, check_in, check_out, status) VALUES ('$guest_id', '$room_id', '$check_in', '$check_out', '$pending')";
 if ($conn->query($sql)) {
     echo json_encode(["message" => "Booking created successfully"]);
 } else {

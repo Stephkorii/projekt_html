@@ -4,12 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         createBooking();
     });
-
-    // Kapcsolati űrlap beküldése
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        sendContactMessage();
-    });
 });
 
 // Foglalás létrehozása
@@ -31,7 +25,12 @@ function createBooking() {
         },
         body: JSON.stringify(formData)
     })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             alert(data.message); // Sikeres foglalás üzenet
             if (data.message === "Booking created successfully") {
@@ -40,7 +39,7 @@ function createBooking() {
         })
         .catch(error => {
             console.error('Hiba:', error);
-            alert('Hiba történt a foglalás során.');
+            alert('Hiba történt a foglalás során: ' + error.message);
         });
 }
 
