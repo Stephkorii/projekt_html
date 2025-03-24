@@ -14,7 +14,7 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background: url('hotel-booking.jpg') no-repeat center fixed;
+    background: url('images/hotel-booking.jpg') no-repeat center fixed;
     background-size: cover;
     line-height: 1.6;
 }

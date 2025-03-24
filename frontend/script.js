@@ -18,7 +18,7 @@ function createBooking() {
         phone: document.getElementById('phone').value
     };
 
-    fetch('http://localhost/api/bookings', {
+    fetch('http://localhost/projekt_html/api/bookings/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ function sendContactMessage() {
         message: document.getElementById('message').value
     };
 
-    fetch('http://localhost/api/contact', {
+    fetch('./api/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
