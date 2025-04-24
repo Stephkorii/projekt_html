@@ -52,7 +52,7 @@ function sendContactMessage() {
         message: document.getElementById('message').value
     };
 
-    fetch('http://localhost/projekt_html/api/contact.php', {
+    fetch('http://localhost/projekt_html/api/bookings/contact.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
