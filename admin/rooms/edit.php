@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" id="room_type" name="room_type" value="<?php echo $room['room_type']; ?>" required>
 
             <label for="price">Ár:</label>
-            <input type="number" id="price" name="price" value="<?php echo $room['price_per_night']; ?>" required>
+            <input type="number" id="price" name="price" value="<?php echo $room['price']; ?>" required>
 
             <label for="capacity">Kapacitás:</label>
             <input type="number" id="capacity" name="capacity" value="<?php echo $room['capacity']; ?>" required>
