@@ -44,30 +44,4 @@ function createBooking() {
         });
 }
 
-// Üzenet küldése
-function sendContactMessage() {
-    const formData = {
-        name: document.getElementById('contact-name').value,
-        email: document.getElementById('contact-email').value,
-        message: document.getElementById('message').value
-    };
 
-    fetch('http://localhost/projekt_html/api/messages/create.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message); // Sikeres üzenetküldés üzenet
-            if (data.message === "Message sent successfully") {
-                document.getElementById('contact-form').reset(); // Űrlap ürítése
-            }
-        })
-        .catch(error => {
-            console.error('Hiba:', error);
-            alert('Hiba történt az üzenet küldése során.');
-        });
-}

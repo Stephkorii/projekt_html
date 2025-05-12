@@ -23,7 +23,6 @@ if (!isset($_SESSION['admin_logged_in'])) {
                 <li><a href="bookings/">Foglalások</a></li>
                 <li><a href="guests/">Vendégek</a></li>
                 <li><a href="rooms/">Szobák</a></li>
-                <li><a href="messages/">Üzenetek</a></li>
                 <li><a href="logout.php">Kijelentkezés</a></li>
             </ul>
         </nav>
