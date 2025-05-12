@@ -67,9 +67,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <label for="status">Státusz:</label>
             <select id="status" name="status" required>
-                <option value="available" <?php echo $room['status'] === 'Elérhető' ? 'selected' : ''; ?>>Elérhető</option>
-                <option value="occupied" <?php echo $room['status'] === 'Foglal' ? 'selected' : ''; ?>>Foglalt</option>
-                <option value="maintenance" <?php echo $room['status'] === 'Karbantartás' ? 'selected' : ''; ?>>Karbantartás</option>
+                <option value="Elérhető" <?php echo $room['status'] === 'Elérhető' ? 'selected' : ''; ?>>Elérhető</option>
+                <option value="Folgal" <?php echo $room['status'] === 'Foglalt' ? 'selected' : ''; ?>>Foglalt</option>
+                <option value="Karbantartás" <?php echo $room['status'] === 'Karbantartás' ? 'selected' : ''; ?>>Karbantartás</option>
             </select>
 
             <button type="submit">Mentés</button>

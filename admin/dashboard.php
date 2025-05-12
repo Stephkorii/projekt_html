@@ -31,7 +31,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
     <main>
         <section>
             <h2>Üdvözöljük az admin felületen!</h2>
-            <p>Itt kezelheti a foglalásokat, vendégeket, szobákat és üzeneteket.</p>
+            <p>Itt kezelheti a foglalásokat, vendégeket, szobákat.</p>
         </section>
     </main>
 </body>
