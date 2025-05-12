@@ -70,6 +70,7 @@ main {
 }
 
 section {
+    text-align: center;
     background-color: var(--bg-transparent);
     padding: 40px;
     margin-bottom: 40px;
@@ -78,6 +79,7 @@ section {
 }
 
 h1, h2 {
+    text-align: center;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
@@ -88,15 +90,18 @@ form {
 }
 
 label {
+    text-align: center;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 input, textarea, select {
-    width: 100%;
+    text-align: center;
+    width: 50%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* Center alignment with bottom margin */
+    display: block; /* Makes margin auto work */
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -143,6 +148,7 @@ input, textarea, select {
     flex-grow: 1; /* A jellemzők kitöltik a helyet, a gomb alul marad */
 }
 .button {
+    
     background-color: var(--primary-color);
     color: #fff;
     padding: 12px 24px;
@@ -211,6 +217,7 @@ input, textarea, select {
 }
 
 #services p {
+    
     color: #fff;
     line-height: 1.6;
 }
