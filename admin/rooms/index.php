@@ -48,7 +48,7 @@ $rooms = $result->fetch_all(MYSQLI_ASSOC);
                     <tr>
                         <td><?php echo $room['room_number']; ?></td>
                         <td><?php echo $room['room_type']; ?></td>
-                        <td><?php echo $room['price']; ?></td>
+                        <td><?php echo $room['price_per_night']; ?></td>
                         <td><?php echo $room['capacity']; ?></td>
                         <td><?php echo $room['status']; ?></td>
                         <td>

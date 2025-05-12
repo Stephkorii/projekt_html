@@ -16,11 +16,11 @@ $room = $result->fetch_assoc();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $room_number = $_POST['room_number'];
     $room_type = $_POST['room_type'];
-    $price = $_POST['price'];
+    $price_per_night = $_POST['price_per_night'];
     $capacity = $_POST['capacity'];
     $status = $_POST['status'];
 
-    $sql = "UPDATE rooms SET room_number = '$room_number', room_type = '$room_type', price = '$price', capacity = '$capacity', status = '$status' WHERE id = $room_id";
+    $sql = "UPDATE rooms SET room_number = '$room_number', room_type = '$room_type', price_per_night = '$price_per_night', capacity = '$capacity', status = '$status' WHERE id = $room_id";
     if ($conn->query($sql)) {
         header('Location: index.php');
         exit;
@@ -60,16 +60,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" id="room_type" name="room_type" value="<?php echo $room['room_type']; ?>" required>
 
             <label for="price">Ár:</label>
-            <input type="number" id="price" name="price" value="<?php echo $room['price']; ?>" required>
+            <input type="number" id="price_per_night" name="price_per_night" value="<?php echo $room['price_per_night']; ?>" required>
 
             <label for="capacity">Kapacitás:</label>
             <input type="number" id="capacity" name="capacity" value="<?php echo $room['capacity']; ?>" required>
 
             <label for="status">Státusz:</label>
             <select id="status" name="status" required>
-                <option value="available" <?php echo $room['status'] === 'available' ? 'selected' : ''; ?>>Elérhető</option>
-                <option value="occupied" <?php echo $room['status'] === 'occupied' ? 'selected' : ''; ?>>Foglalt</option>
-                <option value="maintenance" <?php echo $room['status'] === 'maintenance' ? 'selected' : ''; ?>>Karbantartás</option>
+                <option value="available" <?php echo $room['status'] === 'Elérhető' ? 'selected' : ''; ?>>Elérhető</option>
+                <option value="occupied" <?php echo $room['status'] === 'Foglal' ? 'selected' : ''; ?>>Foglalt</option>
+                <option value="maintenance" <?php echo $room['status'] === 'Karbantartás' ? 'selected' : ''; ?>>Karbantartás</option>
             </select>
 
             <button type="submit">Mentés</button>
