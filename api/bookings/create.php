@@ -48,7 +48,7 @@ if (!$guest_id) {
     exit;
 }
 
-$status = 'pending'; // A változó definiálása
+$status = 'függőben'; // A változó definiálása
 
 $sql = "INSERT INTO bookings (guest_id, room_id, check_in, check_out, status) VALUES ('$guest_id', '$room_id', '$check_in', '$check_out', '$status')";
 if ($conn->query($sql)) {

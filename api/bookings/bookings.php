@@ -6,7 +6,7 @@ function validateDate($date) {
 
 function getRoomIdByType($room_type) {
     global $conn;
-    $sql = "SELECT id FROM rooms WHERE room_type = '$room_type' AND status = 'available' LIMIT 1";
+    $sql = "SELECT id FROM rooms WHERE room_type = '$room_type' AND status = 'elérhető' LIMIT 1";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();

@@ -94,8 +94,8 @@ CREATE TABLE `guests` (
 --
 
 INSERT INTO `guests` (`id`, `name`, `email`, `phone`, `address`, `id_number`, `created_at`) VALUES
-(1, 'Borsos Bence', 'alibiazeletem@gmail.com', '06308382334', NULL, NULL, '2025-04-01 08:13:20'),
-(2, 'Török Krisztián', 'asdfm@gmail.com', '06302348801', NULL, NULL, '2025-04-01 08:16:45'),
+(1, 'Borsos Bence', 'asdfm@gmail.com', '06308382334', NULL, NULL, '2025-04-01 08:13:20'),
+(2, 'Török Krisztián', 'alibiazeletem@gmail.com', '06302348801', NULL, NULL, '2025-04-01 08:16:45'),
 (3, 'Rosta Áron Dávid', 'rostaaron06@gmail.com', '06307716523', NULL, NULL, '2025-04-01 08:56:01');
 
 -- --------------------------------------------------------
