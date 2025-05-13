@@ -54,10 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST">
             <label for="status">Státusz:</label>
             <select id="status" name="status" required>
-                <option value="függőben" <?php echo $booking['status'] === 'függőben' ? 'selected' : ''; ?>>Függőben</option>
-                <option value="megerősítve" <?php echo $booking['status'] === 'megerősítve' ? 'selected' : ''; ?>>Megerősítve</option>
-                <option value="törölve" <?php echo $booking['status'] === 'törölve' ? 'selected' : ''; ?>>Törölve</option>
-                <option value="befejezve" <?php echo $booking['status'] === 'befejezve' ? 'selected' : ''; ?>>Befejezve</option>
+                <option value="függőben" <?php echo $booking['status'] === 'függőben' ? 'selected' : ''; ?>>függőben</option>
+                <option value="megerősítve" <?php echo $booking['status'] === 'megerősítve' ? 'selected' : ''; ?>>megerősítve</option>
+                <option value="törölve" <?php echo $booking['status'] === 'törölve' ? 'selected' : ''; ?>>törölve</option>
+                <option value="befejezve" <?php echo $booking['status'] === 'befejezve' ? 'selected' : ''; ?>>befejezve</option>
             </select>
 
             <button type="submit">Mentés</button>
